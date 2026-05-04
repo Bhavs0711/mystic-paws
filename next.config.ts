@@ -1,10 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "lh3.googleusercontent.com" },
-    ],
+  typescript: {
+    // Vercel will check types separately
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    // Vercel will lint separately
+    ignoreDuringBuilds: false,
   },
 };
 
