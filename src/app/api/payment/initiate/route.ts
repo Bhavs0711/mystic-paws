@@ -5,6 +5,8 @@ import { getRazorpayInstance } from "@/lib/razorpay";
 import { generateOrderId } from "@/lib/utils";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
 const PRICES: Record<number, number> = { 3: 50, 6: 100 };
 
 const schema = z.object({

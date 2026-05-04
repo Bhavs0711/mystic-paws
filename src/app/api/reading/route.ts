@@ -7,6 +7,8 @@ import { CARD_SLUGS } from "@/data/tarot-cards";
 import { shuffle } from "@/lib/utils";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
 const schema = z.object({
   question: z.string().min(10).max(500),
   context: z.string().min(20).max(2000),

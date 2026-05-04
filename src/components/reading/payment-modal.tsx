@@ -106,6 +106,7 @@ export function PaymentModal({ open, onClose, cardCount, onSuccess }: Props) {
           },
         };
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const rzp = new (window as any).Razorpay(options);
         rzp.open();
       };

@@ -5,6 +5,8 @@ import { checkRateLimit } from "@/lib/rate-limit";
 import { prisma } from "@/lib/prisma";
 import { z } from "zod";
 
+export const dynamic = "force-dynamic";
+
 const schema = z.object({
   question: z.string().min(1).max(500),
   context: z.string().min(1).max(2000),
